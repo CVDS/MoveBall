@@ -98,12 +98,13 @@ function deviceOrientationTest(event) {
 }
 
 function doLayout(event) {
+	clearSurface();
 	winW = window.innerWidth;
 	winH = window.innerHeight;
 	var surface = document.getElementById('surface');
 	//surface.width = winW;
 	//surface.height = winH;
-	var radius = 50;
+	var radius = surface.width/10;
 	ball = {	radius:radius,
 				x:Math.round(surface.width/2),
 				y:Math.round(surface.height/2),
@@ -112,8 +113,8 @@ function doLayout(event) {
 
 	var radiusHole = radius+5;
 	hole = {	radius:radiusHole,
-				x:100,
-				y:100,
+				x:Math.random()*(surface.width-radiusHole*2)+radiusHole,
+				y:Math.random()*(surface.height-radiusHole*2)+radiusHole,
 				color:'rgba(0,0,0,255)'};
 	renderHole();
 }

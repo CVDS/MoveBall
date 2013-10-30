@@ -7,12 +7,16 @@
 		<script src="movingBall.js"></script> 
 	</head>
     <body>
-        <!--<a id="fullscreenButton" class="fadable" href="javascript:onFullscreen(event);" style="display: none;"> … </a>-->
-        <p id="timer">00:00</p>
-        <canvas id="surface" width="400" height="500"> Canvas not supported. </canvas>
+        <a id="fullscreenButton" class="fadable" href="javascript:onFullscreen(event);" style="display: none;"> … </a>
+        <div id="top">
+		<p id="timer">00:00</p>
+		</div>
+        <canvas id="surface" width="200" height="200"> Canvas not supported. </canvas>
+		<div id="bottom">
 		<button onclick="start()">start</button>
         <button onclick="pause()">pause</button>
         <button onclick="stop()">stop</button>
+		</div>
     </body>
 </html>
 
